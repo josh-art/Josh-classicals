@@ -1,4 +1,13 @@
 {
+  "platform": "python",
+  "python":{
+    "env": "3.9",
+    "packages": [
+      "flask",
+      "fastapi",
+      "bs4"],
+    "settings": "https://github.com/josh-art/Lizaya-web/
+{
   "buildCommand": "next build"
 }
 {
