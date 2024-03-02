@@ -1,12 +1,28 @@
 {
-  "platform": "python",
-  "python":{
-    "env": "3.9",
-    "packages": [
-      "flask",
-      "fastapi",
-      "bs4"],
-    "settings": "https://github.com/josh-art/Lizaya-web/blob/main/Lizaya_Web/Lizaya_Web/settings.py"
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "Lizaya_Web/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    },
+    {
+      "src": "build_files.sh",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "staticfiles"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "Lizaya_Web/wsgi.py"
+    }
+  ]
 }
 
