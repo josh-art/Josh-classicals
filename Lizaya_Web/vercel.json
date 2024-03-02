@@ -6,30 +6,8 @@
       "flask",
       "fastapi",
       "bs4"],
-    "settings": "https://github.com/josh-art/Lizaya-web/
-{
-  "buildCommand": "next build"
-}
-{
-  "cleanUrls": true
-}
-{
-  "crons": [
-    {
-      "path": "/api/every-minute",
-      "schedule": "* * * * *"
-    },
-    { 
-      "path": "/api/every-hour",
-      "schedule": "0 * * * *"
-    },
-    {
-      "path": "/api/every-day",
-      "schedule": "0 0 * * *"
-    }
-  ]
-  {
-  "devCommand": "next dev"
+    "settings": "https://github.com/josh-art/Lizaya-web/blob/main/Lizaya_Web/Lizaya_Web/settings.py"
+  }
 }
 {
   "framework": "django"
