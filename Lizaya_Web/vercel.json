@@ -1,16 +1,47 @@
 {
-  "builds": [{
-    "src": "/",
-    "use": "@vercel/python",
-    "config": {
-      "maxlambdasize": "15mb", "runtime": "python3.9"
+  "buildCommand": "next build"
+}
+{
+  "cleanUrls": true
+}
+{
+  "crons": [
+    {
+      "path": "/api/every-minute",
+      "schedule": "* * * * *"
+    },
+    { 
+      "path": "/api/every-hour",
+      "schedule": "0 * * * *"
+    },
+    {
+      "path": "/api/every-day",
+      "schedule": "0 0 * * *"
     }
-  }
-  ],
+  ]
+  {
+  "devCommand": "next dev"
+}
+{
+  "framework": "django"
+}
+{
+  "public": true
+}
+{
+  "builds": [
+   { "src": "*.html", "use": "@vercel/static" },
+   { "src": "*.py", "use": "@vercel/python" },
+   { "src": "*.js", "use": "@vercel/node" }
+  ]
+ 
+}
+{
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/"
-    }
+      "src": "/home-page",
+      "headers": { "cache-control" "s-maxage=1000" },
+      "dest": "/index1.html"
+    },
   ]
 }
