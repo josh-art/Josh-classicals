@@ -1,0 +1,16 @@
+{
+  "builds": [{
+    "src": "Lizaya_Web/wsgi.py",
+    "use": "@vercel/python",
+    "config": {
+      "maxlambdasize": "15mb", "runtime": "python3.9"
+    }
+  }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "Lizaya_Web/wsgi.py"
+    }
+  ]
+}
