@@ -51,7 +51,8 @@ pep8==1.7.1
 Pillow==8.1.0
 pluggy==0.13.1
 postgres==4.0
-psycopg2-binary==2.9.9
+psycopg==3.1.18
+psycopg-binary==3.1.18
 psycopg2-pool==1.2
 py==1.10.0
 pyasn1==0.4.8
@@ -85,3 +86,4 @@ vercel==0.2.1
 virtualenv==20.4.0
 whitenoise==5.3.0
 zope.interface==5.3.0
+
