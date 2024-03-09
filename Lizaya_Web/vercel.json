@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "Lizaya_Web/wsgi.py",
-      "use": "@verce/python",
+      "use": "@vercel/python",
       "config": {
         "maxLamdaSize": "15mb", "runtime": "python3.9"}
     },
