@@ -1,22 +1,28 @@
 {
+  "version": 2,
   "builds": [
     {
-      "src": "Lizaya_Web/Lizaya_Web/wsgi.py",
-      "use": "@ardnt/vercel-python-wsgi",
-      "config": { "maxLambdaSize": "15mb" }
+      "src": "Lizaya_Web/wsgi.py",
+      "use": "@verce/python",
+      "config": {
+        "maxLamdaSize": "15mb", "runtime": "python3.9"}
+    },
+    {
+      "src": "build_file.sh",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "staticfiles_build"
+      }
     }
   ],
   "routes": [
-   
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
     {
       "src": "/(.*)",
-      "dest": "Lizaya_Web/Lizaya_Web/wsgi.py"
+      "dest": "Lizaya_Web/wsgi.py"
     }
   ]
 }
-{
-  "rewrites": [
-    {"source": "/(.*)", "destination": "/"}
-  ]
-}
-
