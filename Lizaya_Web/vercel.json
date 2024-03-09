@@ -8,7 +8,7 @@
         "maxLamdaSize": "15mb", "runtime": "python3.9"}
     },
     {
-      "src": "build_file.sh",
+      "src": "build.sh",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "staticfiles_build"
