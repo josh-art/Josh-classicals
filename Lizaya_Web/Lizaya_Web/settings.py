@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'Lizaya_Web.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'verceldb',
+        'USER': 'default',
+        'PASSWORD': 'PZpB2Q5UgkvF',
+        'HOST': 'ep-jolly-snowflake-a76nmcb2-pooler.ap-southeast-2.aws.neon.tech',
+        'POSRT': '5432',
     }
 }
 # Password validation
