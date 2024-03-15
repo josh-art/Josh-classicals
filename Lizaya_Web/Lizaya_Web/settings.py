@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-xy=d9fpal%b$7v6=w%cpe(9h(oz5lm%f2zfsx%kwr+4&!nzj6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.varcel.app']
 
 # Application definition
 
