@@ -17,6 +17,7 @@
 {% for post in posts %}
 <di>
 <table class="card"style="width:100%;background-color:pink">
+    {% csrf_token %}
     <tr>
 <td style="width:70%;text-align:center">
     <div class="card_header">
