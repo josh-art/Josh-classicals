@@ -51,7 +51,7 @@
   background-color: #3498DB;
   color: white;
   padding: 16px;
-  font-size: 16px;
+  font-size: 28px;
   border: none;
   cursor: pointer;
 }
@@ -65,6 +65,8 @@
   display: inline-block;
   float: left;
   margin-top:10px;
+  width:45px;
+  height:30px;
 }
 
 .dropdown-content {
@@ -265,7 +267,7 @@ section {
 	<div class="row">
 		<div class="col-md-12 text-center">
 			<div class="breadcrumbs">
-				<p class="mb-0 text-red" style="font-size:25px;font-color:red;"><a class="text-white" href="{% url 'index' %}"style="border-style: groove; border-width: 5px;border-color: coral;border-radius:13px;background-color:#65fe08;"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+				<p class="mb-0 text-red" style="font-size:35px;font-color:red;"><a class="text-white" href="{% url 'index' %}"style="border-style: groove; border-width: 5px;border-color: coral;border-radius:13px;background-color:#65fe08;"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
                     <span class="text-success"><a href="{% url 'about' %}"style="border-style: groove; border-width: 5px;border-color: coral;border-radius:13px;background-color:#65fe08;"><i class="fa fa-book" aria-hidden="true"></i>About Us</a></span>
                     <span class="text-success"><a href="{% url 'contact' %}"style="border-style: groove; border-width: 5px;border-color: coral;border-radius:13px;background-color:#65fe08;"><i class="fa fa-phone" aria-hidden="true"></i>Reach Us</a></span>
 
@@ -298,9 +300,7 @@ section {
         </div>
 
     </div></section>
- <div class="bottom-left">
-    <h3 style="text-align: center;"><a href="{% url 'index' %}">Our Gallary</a></h3>
-</div>
+
     <div class=""style="padding-bottom:30px">
 </div>
 <hr style="font-size:50px;background-color:green;">
@@ -315,19 +315,8 @@ section {
                     <img src="{% static 'img/contact.png' %}"height="200px"width="350px">
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-4">
-                    <div class="widget">
-                        <div class="widget-title"><h4>Useful Links</h4></div>
-                        <ul class="list-style"style="font-size:18px">
-                            <li><a href="" title="Partners">Our Partners</a></li>
-                            <li><a href="{% url 'feedback' %}" title= "Contact">Need Help?</a></li>
-                            <li><a href="" title="About">About This Website</a></li>
-                            <li><a href="" title="Terms & Conditions">Terms & Conditions</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+            </div></div>
     </footer><!-- footer -->
 <hr style="background-color:blue">
   <footer class="page-footer font-small black">

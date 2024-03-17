@@ -6,6 +6,7 @@
     <title>Staionary</title>
 </head>
 <body>
+
 <div>
     <p class="mb-0 text-red" style="font-size:30px;font-color:red;"><a class="text-white" href="{% url 'index' %}"style="border-style: groove; border-width: 5px;border-color: coral;background-color:#65fe08;"><i class="fa fa-home" aria-hidden="true"></i>Back Home</a>
 </div>
@@ -14,6 +15,42 @@
 </div>
 
 <br>
+<table>
+    <tr>
+        <td>
+            <div>
+                <img src="{% static 'img/pen1.jpeg' %}" height="450px"width="580px"style="">
+            </div>
+
+        </td>
+
+        <td>
+            <div style="margin-right:0px">
+                <img src="{% static 'img/pen4.jpeg' %}" height="450px"width="350px"style="float:right">
+            </div>
+        </td>
+        <td>
+             <div style="margin-right:0px">
+                <img src="{% static 'img/pen5.jpeg' %}" height="450px"width="480px"style="float:right">
+            </div>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>
+            <div>
+                <center><img src="{% static 'img/pen3.jpeg' %}" height="450px"width="650px"style="margin-left:46px;float:center"></center>
+            </div>
+        </td>
+        <td>
+            <div style="margin-right:18px">
+                <img src="{% static 'img/pen2.jpeg' %}" height="450px"width="650px"style="float:right">
+            </div>
+        </td>
+    </tr>
+</table>
+
 {% for post in posts %}
 <di>
 <table class="card"style="width:100%;background-color:pink">
