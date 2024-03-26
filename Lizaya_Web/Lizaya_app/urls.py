@@ -7,7 +7,8 @@ from .views import PostCreateView
 
 
 urlpatterns = [
-    path('', views.index1, name='index'),
+    path('', views.error, name='error'),
+    path('home', views.index1, name='index'),
     path('post/new/', PostCreateView.as_view(), name='post-create'),
     path('post_update', views.post_update, name='post_update'),
     path('feedback/', views.contactForm, name='feedback'),
