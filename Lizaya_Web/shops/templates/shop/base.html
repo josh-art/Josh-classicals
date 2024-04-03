@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Josh Classicals{% endblock %}</title>
+    <meta name="description" content="E-commerce App" />
+  <meta name="keywords" content=" shop,buy,kenya" />
+
+  <script src="{% static 'js/vendor/jquery-2.1.4.min.js' %}"></script>
+  <script src="https://js.braintreegateway.com/js/braintree-2.27.0.min.js"></script>
+  <link href="{% static 'css/vendor/socicon.min.css' %}" rel="stylesheet" media="screen">
+
+  <link href="{% static 'css/vendor/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+  <link href="{% static 'css/theme.min.css' %}" rel="stylesheet" media="screen">
+  <link href="{% static 'css/custom.css' %}" rel="stylesheet" media="screen">
+  <link rel="shortcut icon" href="{% static 'josh.png'%}" type="image/x-icon">
+  <link rel="icon" href="{% static 'josh.png' %}" type="image/x-icon">
+  <link href="{% static 'css/vendor/material-icons.min.css' %}" rel="stylesheet" media="screen">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic">
+
+  <script src="{% static 'js/vendor/jquery-2.1.4.min.js' %}"></script>
+  <script src="https://js.braintreegateway.com/js/braintree-2.27.0.min.js"></script>
+  <link href="{% static 'css/vendor/socicon.min.css' %}" rel="stylesheet" media="screen">
+
+  <link href="{% static 'css/vendor/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+  <link href="{% static 'css/theme.min.css' %}" rel="stylesheet" media="screen">
+  <link href="{% static 'css/custom.css' %}" rel="stylesheet" media="screen">
+  <script src="{% static 'js/vendor/page-preloading.js' %}"></script>
+  <script src="{% static 'js/vendor/modernizr.custom.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
+  <script src="{% static 'js/scripts.js' %}"></script>
+</head>
+<body class="page-preloading">
+
+<style>
+.top-left{
+  position: absolute;
+  top:1px;
+  left:5px;
+  border-radius:10px;
+  font-color: black;
+  font-size:35px;
+  background-color:#FF00FF;
+  }
+
+.centered{
+  position: absolute;
+  color:black;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+</style>
+
+ <header class="navbar navbar-sticky"style="height:130px;background-color:#ADD8E6">
+      <nav class="main-navigation text-center">
+ <button class="top-left"value="Josh Classicals"style="color:black">
+                  <a href="{% url 'shops:Home' %}" class="site-logo visible-desktop" style="color:#77cde3;float:left;font-size:25px;margin- bottom:7px">
+        <span class="grey"style="color:blue">Josh-</span><span style="color:black">Classicals</span>
+      </a>
+          </button>
+        <ul class="menu">
+          <li class="top-left"style="color:blue;font-type:bold;margin-bottom:15px">
+
+          </li>
+          <li><a href="{% url 'shops:Home' %}">Home</a></li>
+          <li class="menu-item-has-children current-menu-item">
+            <a href="#">Shop</a>
+            <ul class="sub-menu">
+               <li class="current-menu-item"><a href="shop-fullwidth-sl.html">Categories</a></li>
+              {% for c in categories %}
+
+              <li {% if category.slug == c.slug %} class="active"{% endif %}>
+                  <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+              </li>
+            {% endfor %}
+
+            </ul>
+          </li>
+          <li><a href="{% url 'shops:reach' %}">About Me</a></li>
+           <li><a href="{% url 'shops:Contact' %}">Report Problem</a></li>
+          <li class="menu-item-has-children current-menu-item">
+            <a href="#">Owino Technologies</a>
+               <ul class="sub-menu">
+                   <li class="current-menu-item">Coming Soon</li>
+          </li>
+
+            </ul>
+          </li>
+        </ul>
+      </nav>
+ <div class="toolbar"style="top:5px">
+        <div class="inner"style="top:5px">
+ <a href="#" class="mobile-menu-toggle"><i class="material-icons menu"></i></a>
+          <img src="{% static 'img/josh1.jpg' %}"width="80px"height="120px">
+        </div></div>
+
+     <div class="centered">
+
+          <div class="shop-bar">
+            <div class="column">
+              <form method="get" class="search-box">
+                <input id="search" type="text" class="form-control" placeholder="Search By Furniture Name">
+                <button type="submit">
+                  <i class="material-icons search"></i>
+                </button>
+              </form>
+            </div>
+          </div></div>
+ </header>
+    {% if messages %}
+    <div class="row callout" class="fw-section bg-gray ">
+      <div class="col-md-6 col-md-offset-4">
+        <div class="row">
+          {% for message in messages %}
+          <div class="container-fluid">
+            {% if message.tags == 'success' %}
+            <div class="col-sm-2" style="background: #63D3E9;width: 60px;height: 50px;color:#fff;"><i
+                class="material-icons" style="font-size:2em;padding-top:10px;text-align: center;">thumb_up</i></div>
+            <div class="col-sm-10" style="color:#fff;background:#c6f3fb;height: 50px;">{{message}}</div>
+            {% else %}
+            <div class="col-sm-2 " style="background:#f36a5a;width: 60px;height: 50px;color:#fff;"><i
+                class="material-icons" style="font-size:2em;padding-top:10px;text-align: center;">warning</i></div>
+            <div class="col-sm-10" style="color:#fff;background-color:#ffb5ad;height: 50px;">{{message}}</div>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endif %}</div>
+
+
+
+{% block content %}
+
+
+{% endblock %}
+<footer class="footer">
+    <div class="column">
+      <p class="text-sm">Need support? Call <span class="text-primary">+254 715 782 132</span></p>
+      <div class="social-bar text-center space-bottom">
+        <a href="#" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Skype">
+          <i class="socicon-skype"></i>
+        </a>
+        <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Facebook">
+          <i class="socicon-facebook"></i>
+        </a>
+        <a href="#" class="sb-google-plus" data-toggle="tooltip" data-placement="top" title=""
+          data-original-title="Google+">
+          <i class="socicon-googleplus"></i>
+        </a>
+        <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+          <i class="socicon-twitter"></i>
+        </a>
+        <a href="#" class="sb-instagram" data-toggle="tooltip" data-placement="top" title=""
+          data-original-title="Instagram">
+          <i class="socicon-instagram"></i>
+        </a>
+      </div>
+      {% now "Y" as current_year %}
+      <p class="copyright">&copy; {{ current_year }}. Developed by <i class="text-danger material-icons favorite"></i> by
+        Owino Technologies</p>
+
+    </div>
+    <div class="column">
+      <h3 class="widget-title">
+        Subscription
+        <small>To receive latest offers and discounts from the shop.</small>
+      </h3>
+      <form action="." class="subscribe-form" novalidate>
+        <input type="email" class="form-control" name="EMAIL" placeholder="Your e-mail">
+
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+            name="b_c7103e2c981361a6639545bd5_1194bb7544" tabindex="-1" value=""></div>
+        <button type="submit"><i style="padding-top:8px;" class="material-icons send"></i></button>
+      </form>
+    </div>
+    <div class="column">
+      <h3 class="widget-title">
+        Payment Methods
+        <small>We support one of the following payment methods.</small>
+      </h3>
+      <div class="cards"><img src="{% static 'img/cards.png'%}" alt="Cards">Mpesa</div>
+
+      <div class="scroll-to-top-btn"><i class="material-icons trending_flat"></i></div>
+    </div>
+  </footer>
+
+  </div>
+
+
+  <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/vendor/smoothscroll.js' %}"></script>
+  <script src="{% static 'js/vendor/velocity.min.js' %}"></script>
+  <script src="{% static 'js/vendor/waves.min.js' %}"></script>
+  <script src="{% static 'js/vendor/icheck.min.js' %}"></script>
+  <script src="{% static 'js/vendor/nouislider.min.js' %}"></script>
+  <script src="{% static 'js/scripts.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
+
+<script src="{% static 'js/jquery.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/bootstrap.min.js' %}" type="text/javascript"></script>
+</body>
+</html>

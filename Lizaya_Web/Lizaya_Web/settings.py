@@ -24,7 +24,7 @@ SECRET_KEY = '-xy=d9fpal%b$7v6=w%cpe(9h(oz5lm%f2zfsx%kwr+4&!nzj6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lizaya-qfhcggwyt-josh-owenzs-projects.vercel.app', '.vercel.app', '*']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Lizaya_app',
+    'shops',
     'crispy_forms',
 ]
 
@@ -72,14 +72,12 @@ WSGI_APPLICATION = 'Lizaya_Web.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'verceldb',
-        'USER': 'default',
-        'PASSWORD': 'PZpB2Q5UgkvF',
-        'HOST': 'ep-jolly-snowflake-a76nmcb2-pooler.ap-southeast-2.aws.neon.tech',
-        'POSRT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -123,7 +121,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 
 SITE_ID = 1

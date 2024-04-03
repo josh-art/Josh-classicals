@@ -1,0 +1,42 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %}
+    {% if category %}{{ category.name }} {% else %} Josh Classical Furnitures {% endif %}
+{% endblock %}
+
+{% block content %}
+   <div class="container">
+      <div class="row" style="margin-top: 8%;">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post"style="height:500px;width:1000px">
+              <div class="row"style="height:500px;width:1000px" >
+                <div class="card"style="height:500px;width:1200px">
+                    <div class="card-body"style="height:500px;width:1200px">
+                        <div class="col-md-6 text-right"style="height:500px;width:1200px">
+                            <img src="{% if product.image %} {{ product.image.url }} {% else %} {% static 'img/default.jpg' %} {% endif %}" alt="..." style="height: 450px; width: 650px">
+                        </div>
+                        <div class="col-md-6" style="padding-left: 20px">
+                            <h3>{{ product.name }}</h3>
+                            <h6><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h6>
+                            <p class="text-muted">Kshs. {{ product.price }}</p>
+                            <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                                {% csrf_token %}
+                                {{ cart_product_form }}
+                                <input type="submit" value="add to cart" class="btn btn-primary">
+                            </form>
+                            <p>{{ product.description|safe|linebreaksbr }}</p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+
+          </div><!-- /.blog-post -->
+
+        </div><!-- /.blog-main -->
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+{% endblock %}
