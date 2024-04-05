@@ -29,13 +29,16 @@ ALLOWED_HOSTS = ['.vercel.app', '*']
 # Application definition
 
 INSTALLED_APPS = [
+    'shops.apps.ShopsConfig',
+    'user.apps.UserConfig',
+    'cart.apps.CartConfig',
+    'order.apps.OrderConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'shops',
     'crispy_forms',
 ]
 
@@ -72,7 +75,6 @@ WSGI_APPLICATION = 'Lizaya_Web.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -83,7 +85,6 @@ DATABASES = {
         'POSRT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -131,4 +132,6 @@ SITE_ID = 1
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CART_SESSION_ID = 'cart'
 

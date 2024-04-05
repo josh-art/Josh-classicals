@@ -1,75 +1,83 @@
-<!DOCTYPE html>
 {% load static %}
-<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Josh Classicals{% endblock %}</title>
-    <meta name="description" content="E-commerce App" />
-  <meta name="keywords" content=" shop,buy,kenya" />
-
-  <script src="{% static 'js/vendor/jquery-2.1.4.min.js' %}"></script>
-  <script src="https://js.braintreegateway.com/js/braintree-2.27.0.min.js"></script>
-  <link href="{% static 'css/vendor/socicon.min.css' %}" rel="stylesheet" media="screen">
-
-  <link href="{% static 'css/vendor/bootstrap.min.css' %}" rel="stylesheet" media="screen">
-  <link href="{% static 'css/theme.min.css' %}" rel="stylesheet" media="screen">
-  <link href="{% static 'css/custom.css' %}" rel="stylesheet" media="screen">
-  <link rel="shortcut icon" href="{% static 'josh.png'%}" type="image/x-icon">
-  <link rel="icon" href="{% static 'josh.png' %}" type="image/x-icon">
-  <link href="{% static 'css/vendor/material-icons.min.css' %}" rel="stylesheet" media="screen">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic">
-
-  <script src="{% static 'js/vendor/jquery-2.1.4.min.js' %}"></script>
-  <script src="https://js.braintreegateway.com/js/braintree-2.27.0.min.js"></script>
-  <link href="{% static 'css/vendor/socicon.min.css' %}" rel="stylesheet" media="screen">
-
-  <link href="{% static 'css/vendor/bootstrap.min.css' %}" rel="stylesheet" media="screen">
-  <link href="{% static 'css/theme.min.css' %}" rel="stylesheet" media="screen">
-  <link href="{% static 'css/custom.css' %}" rel="stylesheet" media="screen">
-  <script src="{% static 'js/vendor/page-preloading.js' %}"></script>
-  <script src="{% static 'js/vendor/modernizr.custom.js' %}"></script>
-  <script src="{% static 'js/custom.js' %}"></script>
-  <script src="{% static 'js/scripts.js' %}"></script>
-</head>
-<body class="page-preloading">
-
+    <title>josh enterprises</title>
+     <meta name="description" content="This is the description">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    {% load static %}
+        <link rel="stylesheet" href="{% static 'styles.css' %}"/>
+ <script src="{% static 'cart.js' %}" async></script>
 <style>
+    ul li{
+    float:left;
+    text-align:center;
+   width:180px;
+   height:55px;
+   background-color:black;
+   line-height:40px;
+   font-size:20px;
+   margin-right:2px;
+    border-radius:2px;
+    box-shadow:0px 8px 16px 0px;
+    transform:scale(0.9);
+}
+
+ul li a:hover{
+   background-color:#48d1cc;
+   opacity:-5px;
+    border-radius:2px;
+}
+
+.top-right {
+  position: absolute;
+  right: 1px;
+}
 .top-left{
   position: absolute;
-  top:1px;
-  left:5px;
-  border-radius:10px;
-  font-color: black;
-  font-size:35px;
-  background-color:#FF00FF;
-  }
+  top:220px;
+  left:1px;
 
-.centered{
-  position: absolute;
-  color:black;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   }
+ul li{
+    float:left;
+    text-align:center;
+   width:180px;
+   height:55px;
+   background-color:#ff00ff;
+   line-height:40px;
+   font-size:20px;
+   margin-right:0px;
+    border-radius:2px;
+    box-shadow:0px 8px 16px 0px;
+    transform:scale(0.9);
+}
 
+.slide {
+	float: left;
+	position: absolute;
+	opacity: 0;
+	transition: opacity 3s linear;
+}
 </style>
+</head>
 
- <header class="navbar navbar-sticky"style="height:130px;background-color:#ADD8E6">
-      <nav class="main-navigation text-center">
- <button class="top-left"value="Josh Classicals"style="color:black">
-                  <a href="{% url 'shops:Home' %}" class="site-logo visible-desktop" style="color:#77cde3;float:left;font-size:25px;margin- bottom:7px">
-        <span class="grey"style="color:blue">Josh-</span><span style="color:black">Classicals</span>
-      </a>
-          </button>
-        <ul class="menu">
-          <li class="top-left"style="color:blue;font-type:bold;margin-bottom:15px">
 
-          </li>
-          <li><a href="{% url 'shops:Home' %}">Home</a></li>
-          <li class="menu-item-has-children current-menu-item">
-            <a href="#">Shop</a>
-            <ul class="sub-menu">
+<body>
+
+<center><img src="{% static 'img/default/josh.png' %}"height="90px"width="180px">
+    <b><u><a style="color:black;font-size:50px;font-family:verdana;">Josh Classicals</a></u></b><br>
+<i><b><a style="color:blue;font-size:20px;font-family:verdana;">For quality and affordable Services and Furniture products</a></b></i>
+</center>
+
+<fieldset style="background-color:pink;height:150px">
+     <img src="{% static 'img/default/1.png' %}"height="180px" width="100%" alt="Bground" style="margin-top:auto">
+<ul style="top:145px;position:absolute">
+    <li style="background-color:#ff00ff;"><a href="{% url 'shops:Home' %}">Home:</a></li>
+    <li style="font-size:13px;background-color:#ff00ff;"><a href="">Categories:</a>
+     <ul class="sub-menu">
                <li class="current-menu-item"><a href="shop-fullwidth-sl.html">Categories</a></li>
               {% for c in categories %}
 
@@ -79,68 +87,139 @@
             {% endfor %}
 
             </ul>
-          </li>
-          <li><a href="{% url 'shops:reach' %}">About Me</a></li>
-           <li><a href="{% url 'shops:Contact' %}">Report Problem</a></li>
-          <li class="menu-item-has-children current-menu-item">
-            <a href="#">Owino Technologies</a>
-               <ul class="sub-menu">
-                   <li class="current-menu-item">Coming Soon</li>
-          </li>
-
-            </ul>
-          </li>
+    </li>
+    <li style="background-color:#ff00ff;"><a href="">My Services:</a>
+      </li>
+    <li style="background-color:#ff00ff;"><a href="">About Me</a></li>
+    <li style="background-color:#7fffd4">Menu
+        <ul style="background-color:#ff00ff">
+           <li style="background-color:#ff00ff;"><a href="{% url 'shops:reach' %}">Reach Me</a></li>
+           <li style="background-color:#ff00ff;"><a href="{% url 'shops:Contact' %}">Report Problem</a></li>
+            <li style="background-color:#ff00ff;"><a href="">Mission</a></li>
+           <li style="background-color:#ff00ff;"><a href="">Vision</a></li>
         </ul>
-      </nav>
- <div class="toolbar"style="top:5px">
-        <div class="inner"style="top:5px">
- <a href="#" class="mobile-menu-toggle"><i class="material-icons menu"></i></a>
-          <img src="{% static 'img/josh1.jpg' %}"width="80px"height="120px">
-        </div></div>
-
-     <div class="centered">
-
-          <div class="shop-bar">
-            <div class="column">
-              <form method="get" class="search-box">
-                <input id="search" type="text" class="form-control" placeholder="Search By Furniture Name">
-                <button type="submit">
-                  <i class="material-icons search"></i>
-                </button>
-              </form>
-            </div>
-          </div></div>
- </header>
-    {% if messages %}
-    <div class="row callout" class="fw-section bg-gray ">
-      <div class="col-md-6 col-md-offset-4">
-        <div class="row">
-          {% for message in messages %}
-          <div class="container-fluid">
-            {% if message.tags == 'success' %}
-            <div class="col-sm-2" style="background: #63D3E9;width: 60px;height: 50px;color:#fff;"><i
-                class="material-icons" style="font-size:2em;padding-top:10px;text-align: center;">thumb_up</i></div>
-            <div class="col-sm-10" style="color:#fff;background:#c6f3fb;height: 50px;">{{message}}</div>
-            {% else %}
-            <div class="col-sm-2 " style="background:#f36a5a;width: 60px;height: 50px;color:#fff;"><i
-                class="material-icons" style="font-size:2em;padding-top:10px;text-align: center;">warning</i></div>
-            <div class="col-sm-10" style="color:#fff;background-color:#ffb5ad;height: 50px;">{{message}}</div>
-            {% endif %}
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-    {% endif %}</div>
+    </li>
 
 
+</ul>
 
-{% block content %}
 
-
-{% endblock %}
-<footer class="footer">
+      <div class="wrap top-left">
+          <p style="font-size:19px"><b>Search Item Here:</b></p>
+           <div class="shop-bar">
     <div class="column">
+        <form method="get" class="search-box">
+        <input class="form-control" type="text" id="search"placeholder="Enter Item's Name here">
+        <button type="submit"class=""style="margin-right:1px">
+            <img src="{% static 'serchicon.png' %}"height="35"width="35"/>
+        </button>
+     </form></div>
+           </div></div>
+
+<div class="" style="right:1px;top:145px;margin-right:1px;position:absolute">
+          <img src="{% static 'img/default/user_review.png' %}"height="50px"width="50px"onclick="document.getElementById('id01').style.display='block'">
+    <br>
+          {% if request.user.is_authenticated %}<a href="#" style="font-size:1em;">Welcome: <br>{{request.user}}
+{% else %}Login
+</a>{% endif %}
+
+    <div id="id01"class="modal">
+        <form class="modal-content animate"style="margin-top:100px;top:100px" action="action_page.php">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'"
+class="close"title="close Modal">&times;</span>
+                <img src="{% static 'img/default/user_review.png' %}"height="60"width="60" alt="Avatar">
+            </div>
+            <div class="login">
+                <label><b>Customer's Name:</b></label><br>
+                <input type="text"placeholder="Enter Your Name"name="uname" required>
+               <br>
+                <label><b>Password</b></label><br>
+                <input type="password"placeholder="Enter Password"name="psw"required>
+               <br>
+                <button type="submit"style="margin:8px 0;padding:14px 20px;background-color:#48d1cc;color:white;border:block">Login</button><br>
+                <input type="checkbox"checked="checked"style="margin-top:10px;margin-bottom:10px">Remember Me
+            </div>
+            <div class="login"style="background-color:#f1f1f1">
+                <button type="button"onclick="document.getElementById('id01').style.display='none'"
+                        class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot
+                    <a href="#">Password?</a>
+                </span>
+            </div>
+        </form>
+    </div>
+     <div class="cd-cart cd-cart--empty js-cd-cart top-right"style="float:right;top:102px;position:absolute">
+         <button style="cursor:pointer;height:50px"class="section-header btn-primary "onclick="document.getElementById('josh')
+                   .style.display='block'">CART<br>
+             <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"style="background-color:#00ff00">0</span> </span></button>
+		  <div id="josh" class="undisputed"style="width:850px;background-color:#ADD8E6">
+               <div class="cart-row"style="width:850px;background-color:#3ADD8E6">
+                <span onclick="document.getElementById('josh')
+                    .style.display='none'"
+                               class="close"title="Close Modal">&times;</span>
+               <span class="cart-item cart-header cart-column"><u>ITEM</u></span>
+               <span class="cart-price cart-header cart-column"><u>PRICE</u></span>
+               <span class="cart-quantity cart-header cart-column"><u>QUANTITY</u></span>
+            </div>
+                <div class="cart-items"style="background-color:3ADD8E6">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total Price:</strong>
+                <span class="cart-total-price"><b>Ksh0</b></span>
+                <a href=""class="checkout btn"required="please select products">Checkout</a>
+            </div>
+          </div>
+     </div></div>
+</fieldset>
+
+
+
+
+            <hr style="font-size:20px">
+<table>
+    <tr><td>
+          <p style="font-size:19px;margin-top:20px;margin-left:40px"><b><i>Our Gallery:</i></b></p><br>
+          <div class="slider" id="main-slider"style="margin-top:10px"><!-- outermost container element -->
+	<div class="slider-wrapper"><!-- innermost wrapper element -->
+		<img src="{% static 'img/corner1.jpg' %}" alt="First" class="slide" height="350px"width="650px"/><!-- slides -->
+        <img src="{% static 'img/coffeetable1.jpg' %}"alt="Second"class="slide"height="350px"width="650px"/>
+		<img src="{% static 'img/Dtable.jpg' %}" alt="Third" class="slide" height="350px"width="650px"/>
+        <img src="{% static 'img/wardrobe1.jpg' %}"alt="Fourth"class="slide"height="350px"width="650px"/>
+		<img src="{% static 'img/shelve.jpg' %}" alt="Fifth" class="slide" height="350px"width="650px"/>
+
+	</div>
+
+          </div>
+    </td>
+        <td>
+           <p style="font-size:19px;margin-top:20px;margin-left:40px"><b><i>News & Notices:</i></b></p><br>
+       <fieldset></fieldset>
+        </td>
+    </tr>
+</table>
+
+
+
+    <div class="mt-5 pt-4">
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endfor %}
+    {% endif %}
+    </div>
+
+    {% block content %}
+
+    {% endblock %}
+
+<footer class="footer"style="background-color:#ADD8E6;border-radius:5px;padding-top:15px">
+         <div class="column">
       <p class="text-sm">Need support? Call <span class="text-primary">+254 715 782 132</span></p>
       <div class="social-bar text-center space-bottom">
         <a href="#" class="sb-skype" data-toggle="tooltip" data-placement="top" title="Skype">
@@ -160,12 +239,7 @@
           data-original-title="Instagram">
           <i class="socicon-instagram"></i>
         </a>
-      </div>
-      {% now "Y" as current_year %}
-      <p class="copyright">&copy; {{ current_year }}. Developed by <i class="text-danger material-icons favorite"></i> by
-        Owino Technologies</p>
-
-    </div>
+      </div></div>
     <div class="column">
       <h3 class="widget-title">
         Subscription
@@ -188,10 +262,13 @@
 
       <div class="scroll-to-top-btn"><i class="material-icons trending_flat"></i></div>
     </div>
-  </footer>
-
-  </div>
-
+    </footer><!-- footer -->
+<hr style="background-color:blue">
+  <footer class="page-footer font-small black">
+	  <div class="footer-copyright text-center py-3"style="font-size:18px">Developed by Owino Technologies © {% now "Y" %}
+	  <br><small class="text-muted">All rights reserved!</small>
+	</div>
+	</footer>
 
   <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
   <script src="{% static 'js/vendor/smoothscroll.js' %}"></script>

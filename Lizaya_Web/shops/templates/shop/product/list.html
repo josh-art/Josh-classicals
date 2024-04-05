@@ -5,525 +5,73 @@
 {% endblock %}
 
 {% block content %}
-   <div class="container-fluid">
-      <div class="row" style="margin-top: 6%">
-
-        <div class="col-sm-8 blog-main">
-
-          <div class="blog-post">
-              <div class="row">
-
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/corner.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Corner Stand</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 15000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/coffeetable1.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Coffee Table</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 10000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/corner1.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Corner Stand</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 15000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/shelve.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Shelve</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 10000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/Rasta.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Ras Seat</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 6500
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/shoer4.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Shoe Ruck1</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 3500
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/shoeruck1.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Shoe Ruck2</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 5500
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/stable.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">School Table</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 4500
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/stable1.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Study Table</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 15000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/stable2.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Study Table</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 15000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/stable3.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Table</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 5000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/stand.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Tv Stand</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 10000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/stand1.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Tv Stand</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 10000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/StandA.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Cabinet</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 10000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/table1.jpg' %}" alt="..." style="height: 200px; width: 220px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Coffee Table</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 4500
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/TableStand.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Classy Table</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 8500
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/WallUnitA.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">4ft Wall Unit</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 15000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/WallUnitB.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">5ft Wall Unit</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 20000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/WallUnitC.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">5ft Wall Unit</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 20000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/wardrobe1.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Wow Wardrobe</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 18000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/wardrobe2.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href=""> Wardrobe</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 18000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/table5.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Table 2</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 5500
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/Dtable1.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Table 2</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 6500
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/Dtable2.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Table 3</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 8000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/chest1.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">Chest Drawer</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 10000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/bed1.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">4*6 Bed 1</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 24000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-                   <div class="col-md-4 item_search">
-                        <div class="thumbnail">
-                            <a href="">
-                                <img src="{% static 'img/bed2.jpg' %}" alt="..." style="height: 200px; width: 190px">
-                            </a>
-                            <div class="caption">
-                                <h3 class="text-center">
-                                    <a href="">4*6 Bed 2</a>
-                                </h3>
-                                <p class="text"style="font-size:20px;color:red">Kshs. 16000
-                                    <button type="submit"class="text"style="background-color:pink">
-                                        <a href="{{ product.get_absolute_url }}">Check Details?</a></button>
-                                </p>
-
-                            </div>
-                        </div>
-
-                      </div>
-              </div>
-
-
-          </div><!-- /.blog-post -->
-
-        </div><!-- /.blog-main -->
-
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          <div class="sidebar-module">
-            <h4>Furniture Categories</h4>
-            <ol class="list-unstyled">
-              <li {% if not category %} class="active"{% endif %}><a href="{% url 'shops:Home' %}">All</a></li>
-            {% for c in categories %}
-
-              <li {% if category.slug == c.slug %} class="active"{% endif %}>
-                  <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
-              </li>
-            {% endfor %}
-            </ol>
-          </div>
-        </div><!-- /.blog-sidebar -->
-
-      </div><!-- /.row -->
-
-    </div><!-- /.container -->
+  <h1 style="font-size:18px;font-family:verdana;"><b><u>OUR AVAILABLE PRODUCTS:</u></b></h1>
+
+<div class="row fadein">
+
+    {% for item in object_list %}
+    <div class="col">
+    </div>
+    {% endfor %}
+</div>
+<div style="border-style:block">
+    <table id="myTable">
+        <tr class="header">
+  <td><div class="shop-item">
+            <a class="lightbox"href="#2Table"style="height:">
+                    <img class="shop-item-image"src="{% static 'img/corner.jpg' %}"height="300px"width="300px">
+            </a><br> <span class="shop-item-title shop-item-details">Corner Stand</span>
+      <h class="shop-item-details"style="font-size:20px;"><b>Price:</b>
+          <p class="shop-item-price"><b>Ksh15000</b></p></h>
+          <br>
+          <button class="btn btn-primary shop-item-button"style="">Add To Cart</button>
+      <div class="dropdown">
+      <a onclick="myDropdown()" class="btn-info"><b>Details</b></a>
+          <div id="mydropdown"class="info-content">
+              <a class="list">1. color:Black n White</a>
+              <a class="list">2. Length:3ft</a>
+              <a class="list">3. Height:6ft</a>
+          </div></div></div>
+
+  </td>
+<td> <div class="shop-item">
+    <a class="lightbox"href="#cTable">
+                    <img class="shop-item-image"src="{% static 'img/bed1.jpg' %}"height="300px"width="300px">
+    </a>
+     </a><br> <span class="shop-item-title shop-item-details">Bed 1</span>
+      <h class="shop-item-details"style="font-size:20px;"><b>Price:</b>
+          <p class="shop-item-price"><b>Ksh10000</b></p></h>
+          <br>
+          <button class="btn btn-primary shop-item-button">Add To Cart</button>
+     <div class="dropdown">
+      <a onclick="myDropdown()" class="btn-info"><b>Details</b></a>
+          <div id="mydropdown"class="info-content">
+              <a class="list">1. Size:4ft * 6 ft</a>
+              <a class="list">2. color:Mahogany Light</a>
+              <a class="list">3. Height:Normal</a>
+              <a class="list">4. 2 Stools</a>
+          </div></div>
+      </div>
+
+ </div>
+</td>
+            <td> <div class="shop-item">
+                  <a class="lightbox"href="#5Bed">
+                    <img class="shop-item-image" src="{% static 'img/bed2.jpg' %}"height="300px"width="300px">
+                  </a>
+                 </a><br> <span class="shop-item-title shop-item-details">Bed 1</span>
+      <h class="shop-item-details"style="font-size:20px;"><b>Price:</b>
+          <p class="shop-item-price"><b>Ksh12000</b></p></h>
+          <br>
+          <button class="btn btn-primary shop-item-button">Add To Cart</button>
+                 <div class="dropdown">
+                     <a class="btn-info"><b>Details</b></a>
+          <div id="mydropdown"class="info-content">
+              <a class="list">1. Bed Size:5 * 6 ft</a>
+              <a class="list">2. color:Walnut Dark</a>
+              <a class="list">3. Design:Normal</a>
+          </div></div></div>
+
+</div></td></tr></table>
 {% endblock %}
 
