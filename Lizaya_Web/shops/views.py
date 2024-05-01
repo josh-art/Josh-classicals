@@ -1,10 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Category, Product
-from cart.forms import CartAddProductForm
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib import messages
 from django.contrib.auth.models import User
-from cart.views import Cart
 from .forms import *
 from .models import Contacts
 
@@ -25,14 +23,6 @@ def product_list(request, category_slug=None):
     return render(request, 'shop/product/list.html', context)
 
 
-def product_detail(request, id, slug):
-    product = get_object_or_404(Product, id=id, slug=slug, available=True)
-    cart_product_form = CartAddProductForm()
-    context = {
-        'product': product,
-        'cart_product_form': cart_product_form
-    }
-    return render(request, 'shops/product/detail.html', context)
 
 def contact(request):
     if request.method == "GET":
@@ -54,40 +44,11 @@ def contact(request):
 def feedback(request):
     return render(request, 'contact.html')
 
-@login_required(login_url='../../login/')
-def addUser(request):
-    name = 'Login and Register '
-    cart_id = request.session.get('cart_id')
-    context = {
-        'name': name
-    }
+def folio(request):
+    return render(request, 'portfolio.html')
 
-    if request.method == 'POST':
-        uname = request.POST.get('uname')
-        email = request.POST.get('email')
-        pass1 = request.POST.get('pass1')
-        pass2 = request.POST.get('pass2')
-        if pass1 == pass2:
-
-            user = User.objects.create(
-                username=uname,
-                email=email,
-                password=pass1
-            )
-            if cart_id == None:
-                cart = Cart()
-                cart.user = user
-                cart.save()
-                cart_id = cart.id
-                request.session['cart_id'] = cart_id
-            cart = Cart.objects.get(pk=cart_id)
-            cart.user = user
-            cart.save()
-
-            messages.success(request, 'Featured Product Saved')
-            return redirect('Home')
-    else:
-        return render(request, 'adduser.html', context)
+def about(request):
+    return render(request, 'about.html')
 
 
 @login_required(login_url='../../login/')

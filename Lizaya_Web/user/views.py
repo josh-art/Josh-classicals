@@ -53,9 +53,9 @@ def handlesignup(request):
         user.save()
         messages.success(
             request, " Your account has been successfully created<br>Please login below")
-        return redirect("user:login")
+        return redirect("shops:Home")
     else:
-        return HttpResponse('404 - NOT FOUND ')
+        return HttpResponse('signup')
 
 
 # view for rendering data from login page
@@ -72,8 +72,8 @@ def handlelogin(request):
             return redirect("shops:Home")
         else:
             messages.error(request, " Invalid Credentials, Please try again")
-            return redirect("user:login")
-    return HttpResponse('404 - NOT FOUND ')
+            return redirect("user:signup")
+
 
 
 # view for rendering logout

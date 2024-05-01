@@ -1,0 +1,148 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %}
+    {% if category %}{{ category.name }} {% else %}My Port Folio{% endif %}
+{% endblock %}
+
+{% block content %}
+<center><h1><u>About Me</u></h1></center>
+<table>
+    <tr>
+        <tr>
+           <td> <div class="shop-item">
+                  <a class="lightbox"href="#5Bed">
+                    <img class="shop-item-image" src="{% static 'img/josh254.jpg' %}"height="280px"width="250px">
+                  </a>
+                 <br> <span class="shop-item-title shop-item-details">@ Work</span>
+      </div>
+
+</div></td>
+        <td> <div class="shop-item">
+                  <a class="lightbox"href="#5Bed">
+                    <img class="shop-item-image" src="{% static 'img/josh256.jpg' %}"height="350px"width="300px">
+                  </a>
+                 <br> <span class="shop-item-title shop-item-details">@ Work</span>
+      </div>
+
+</div></td>
+       <td> <div class="shop-item">
+                  <a class="lightbox"href="#5Bed">
+                    <img class="shop-item-image" src="{% static 'img/joshu.jpg' %}"height="280px"width="250px">
+                  </a>
+                 <br> <span class="shop-item-title shop-item-details">After Work</span>
+      </div>
+
+</div></td>
+    </tr>
+</table>
+<fieldset style="border-type:block 2px;background-color:pink">
+    <legend style="font-size:25px"><b><i>Personal Statement:</i></b></legend>
+    <p style="font-size:19px">I am a Carpenter with over 6 years of experience in the industry i make various types of furniture
+    and also do cabinet fitting<br>
+    More so am also graduate with a degree in Information Technology i do make software systems. I design and develop
+    various software products such as Website, Databases, Management Systems e.t.c<br>
+        To find out more of my previous works and Service click <button style="width:50px;height:25px"><a href="{% url 'shops:folio' %}" >Here</a></button>To check my Portfolio</p>
+</fieldset>
+<fieldset>
+    <legend style="font-size:25px"><b><i>Types Of Furniture i Make Include:</i></b></legend>
+     <table style="">
+            <tr>
+                <td>
+                   <p style="margin-left:450px">
+                       <b> 1.Wall Units and Tv Stands</b>
+                   </p>
+                </td>
+            <td>
+                   <p style="margin-right:450px">
+                       <b>2.Tables and Coffee Tables</b>
+                   </p>
+                </td>
+            </tr>
+ <tr>
+                <td>
+                   <p style="margin-left:450px">
+                       <b> 3.Beds</b>
+                   </p>
+                </td>
+            <td>
+                   <p style="margin-right:450px">
+                       <b>4.Dinning Tables</b>
+                   </p>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                   <p style="margin-left:450px">
+                       <b> 5.Shoe Ruck</b>
+                   </p>
+                </td>
+            <td>
+                   <p style="margin-right:450px">
+                       <b>6.Chest of Drawer</b>
+                   </p>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                   <p style="margin-left:450px">
+                       <b> 7.Sofa Sets seats</b>
+                   </p>
+                </td>
+            <td>
+                   <p style="margin-right:450px">
+                       <b>8.Home Fittings</b>
+                   </p>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                   <p style="margin-left:450px">
+                       <b> 9.Wardrobe</b>
+                   </p>
+                </td>
+            <td>
+                   <p style="margin-right:450px">
+                       <b>10.Door Fitting</b>
+                   </p>
+                </td>
+            </tr>
+        </table>
+</fieldset>
+<fieldset>
+    <legend style="font-size:25px"><b><i>My Services Include:</i></b></legend>
+    <table style="">
+            <tr>
+                <td>
+                   <p style="margin-left:450px">
+                       <b> 1.Web system design and Development</b>
+                   </p>
+                </td>
+            <td>
+                   <p style="margin-right:450px">
+                       <b>2.Drawing and Painting</b>
+                   </p>
+                </td>
+            </tr>
+ <tr>
+                <td>
+                   <p style="margin-left:450px">
+                       <b> 3.Data Entry</b>
+                   </p>
+                </td>
+            <td>
+                   <p style="margin-right:450px">
+                       <b>4.Data collection</b>
+                   </p>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                   <p style="margin-left:450px">
+                       <b> 5.Electrical Connection</b>
+                   </p>
+                </td>
+
+            </tr>
+ </table>
+</fieldset>
+{% endblock %}
