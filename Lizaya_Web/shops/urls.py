@@ -5,13 +5,10 @@ app_name = 'shops'
 
 urlpatterns = [
     path('', views.product_list, name='Home'),
-    #    path(r'^(?P<category_slug>[-\w]+)/$', views.product_list, name='product_list_by_category'),
-    #    path(r'^(?P<id>\d+)/(?P<slug>[-\w]+)/$', views.product_detail, name='product_detail'),
-    path('contact me/', views.contact, name='Contact'),
-    path('reach me/', views.feedback, name='reach'),
+    path('contact/', views.contact, name='Contact'),
+    path('reach/', views.feedback, name='reach'),
     path('PortFolio/', views.folio, name='folio'),
-    path('About Me/', views.about, name='about'),
-    #    path(r'^add user/$', views.addUser, name='AddUser'),
+    path('About/', views.about, name='about'),
     path('addfeatured/', views.AddFeatured, name='AddFeatured'),
 
 ]
